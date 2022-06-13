@@ -1,0 +1,55 @@
+<table border="3" style="width:90%;table-layout:fixed;">
+    <tr>
+        <th scope="col">
+            <font size="+2">IMIĘ I NAZWISKO</font>
+        </th>
+        <th style="width:40%;" scope="col">
+            <font size="+2">PEŁNE DANE ADRESOWE</font>
+        </th>
+        <th scope="col">
+            <font size="+2">AKTYWNY LINK DO STRONY WWW UŻYTKOWNIKA</font>
+        </th>
+    </tr>
+</table>
+
+{{#each users}}
+<table border="1" style="width:90%;table-layout:fixed;">
+    <tr style="text-align: center; ">
+        <td rowspan="6">
+            <font size="+3">{{name}}</font>
+        </td>
+        <td style="width:40%; text-align: left;">
+            <font size="+1"><b>ULICA:</b> {{address.street}}</font>
+        </td>
+        <td rowspan="6">
+            <font size="+3">{{website}}</font>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:40%;">
+            <font size="+1"><b>NUMER APARTAMENTU:</b> {{address.suite}}</font>
+        </td>
+
+    </tr>
+    <tr>
+        <td style="width:40%;">
+            <font size="+1"><b>KOD POCZTOWY:</b> <span>{{address.zipcode}}</font></span>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:40%;">
+            <font size="+1"><b>MIEJSCOWOŚĆ:</b><span>{{address.city}}</font></span>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:40%;">
+            <font size="+1"><b>SZEROKOŚĆ GEO:</b><span>{{address.geo.lat}}</font></span>
+        </td>
+    </tr>
+    <tr>
+        <td style="width:40%;">
+            <font size="+1"><b>DŁUGOŚĆ GEO:</b><span>{{address.geo.lng}}</font></span>
+        </td>
+    </tr>
+</table>
+{{/each}}
