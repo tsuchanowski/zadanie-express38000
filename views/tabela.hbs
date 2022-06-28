@@ -1,56 +1,55 @@
 {{>header}}
- 
+
 <table border="3" style="width:90%;table-layout:fixed;">
     <tr>
-        <th scope="col">
-            <h1>IMIĘ I NAZWISKO<h1>
+        <th class="header" scope="col">
+            IMIĘ I NAZWISKO
         </th>
-        <th style="width:40%;" scope="col">
-            <p class="naglowek">PEŁNE DANE ADRESOWE</p>
+        <th class="header" style="width:40%;" scope="col">
+            PEŁNE DANE ADRESOWE
         </th>
-        <th scope="col">
-            <p class="naglowek">AKTYWNY LINK DO STRONY WWW UŻYTKOWNIKA</p>
+        <th class="header" scope="col">
+            AKTYWNY LINK DO STRONY WWW UŻYTKOWNIKA
         </th>
     </tr>
 </table>
 
 {{#each users}}
 <table border="1" style="width:90%;table-layout:fixed;">
-    <tr style="text-align: center; ">
-        <td rowspan="6">
-            <font size="+3">{{name}}</font>
+    <tr>
+        <td class="name" rowspan="6">
+            {{name}}
         </td>
-        <td style="width:40%; text-align: left;">
-            <font size="+1"><b>ULICA:</b> {{address.street}}</font>
+        <td class="address">
+            <b>ULICA:</b> {{address.street}}
         </td>
-        <td rowspan="6">
-            <font size="+3">{{website}}</font>
+        <td class="website" rowspan="6">
+            {{website}}
         </td>
     </tr>
     <tr>
-        <td style="width:40%;">
-            <font size="+1"><b>NUMER APARTAMENTU:</b> {{address.suite}}</font>
-        </td>
-
-    </tr>
-    <tr>
-        <td style="width:40%;">
-            <font size="+1"><b>KOD POCZTOWY:</b> <span>{{address.zipcode}}</font></span>
+        <td class="address">
+            <b>NUMER APARTAMENTU:</b> {{address.suite}}
         </td>
     </tr>
     <tr>
-        <td style="width:40%;">
-            <font size="+1"><b>MIEJSCOWOŚĆ:</b><span>{{address.city}}</font></span>
+        <td class="address">
+            <b>KOD POCZTOWY:</b> {{address.zipcode}}
         </td>
     </tr>
     <tr>
-        <td style="width:40%;">
-            <font size="+1"><b>SZEROKOŚĆ GEO:</b><span>{{address.geo.lat}}</font></span>
+        <td class="address">
+            <b>MIEJSCOWOŚĆ:</b> {{address.city}}
         </td>
     </tr>
     <tr>
-        <td style="width:40%;">
-            <font size="+1"><b>DŁUGOŚĆ GEO:</b><span>{{address.geo.lng}}</font></span>
+        <td class="address">
+            <b>SZEROKOŚĆ GEO:</b> {{address.geo.lat}}
+        </td>
+    </tr>
+    <tr>
+        <td class="address">
+            <b>DŁUGOŚĆ GEO:</b> {{address.geo.lng}}
         </td>
     </tr>
 </table>

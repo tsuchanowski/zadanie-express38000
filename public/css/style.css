@@ -1,11 +1,31 @@
-h1 {
-    font-size: 20px;
-    color: black;
+.header {
+    font-size: 30px;
     background-color: aquamarine;
+    color: black;
+    font-weight: bold;
 }
 
-.naglowek {
+.name {
+    font-size: 29px;
+    background-color: rgb(225, 127, 255);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.address {
     font-size: 20px;
-    background-color: aquamarine;
-    color:black;
+    background-color: rgb(255, 253, 127);
+    color: black;
+    width: 40%;
+    text-align: left;
+}
+
+.website {
+    font-size: 32px;
+    background-color: rgba(189, 231, 241, 0.733);
+    color: black;
+    font-weight: bold;
+    text-align: center;
 }
